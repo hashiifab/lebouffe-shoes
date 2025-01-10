@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-loop {
+  animation: infinite-scroll 20s linear infinite;
+}
+
+.product-container {
+  display: flex;
+  gap: 8px; /* Adds space between products */
+  padding: 8px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.product-container .product-item {
+  min-width: 500px;
+  transition: all 0.3s ease;
+}
